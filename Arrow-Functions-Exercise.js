@@ -9,6 +9,7 @@ function double(arr) {
 }
 // ES2015 Arrow Functions Shorthand
 // Refactor the above code to use two arrow functions. Turn it into a one-liner.
+const double = arr => arr.map(val=>val*2);
 
 // /* Write an ES2015 Version */
 // Refactor the following function to use arrow functions:
@@ -22,4 +23,14 @@ function squareAndFindEvens(numbers){
     return square % 2 === 0;
   });
   return evens;
+}
+
+
+//new code
+const squareAndFindEvens = numbers => {
+    const squares = numbers.map(num=>num ** 2);
+
+    const evens = squares.filter(square=>square % 2 === 0);
+
+    return evens;
 }
